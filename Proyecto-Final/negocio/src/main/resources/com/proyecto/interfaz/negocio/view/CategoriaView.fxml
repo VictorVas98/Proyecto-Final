@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.proyecto.interfaz.negocio.controller.CategoriaController">
+    <top>
+        <Label text="Gestión de Categorías"/>
+    </top>
+    <center>
+        <TableView fx:id="categoriaTable">
+            <columns>
+                <TableColumn fx:id="idColumn" text="ID"/>
+                <TableColumn fx:id="nombreColumn" text="Nombre"/>
+            </columns>
+        </TableView>
+    </center>
+    <bottom>
+        <HBox spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Label text="Nombre"/>
+            <TextField fx:id="nombreField"/>
+            <Button text="Agregar" onAction="#handleAgregar"/>
+            <Button text="Eliminar" onAction="#handleEliminar"/>
+        </HBox>
+    </bottom>
+</BorderPane>

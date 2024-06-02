@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.proyecto.interfaz.negocio.controller.VentaController">
+    <top>
+        <VBox spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <HBox spacing="10">
+                <Label text="Cliente:"/>
+                <ComboBox fx:id="clienteComboBox"/>
+            </HBox>
+            <HBox spacing="10">
+                <Label text="Producto:"/>
+                <ComboBox fx:id="productoComboBox"/>
+                <Label text="Cantidad:"/>
+                <TextField fx:id="cantidadField"/>
+                <Button text="Agregar Producto" fx:id="agregarProductoButton"/>
+            </HBox>
+        </VBox>
+    </top>
+    <center>
+        <TableView fx:id="productoTable">
+            <columns>
+                <TableColumn fx:id="productoIdColumn" text="ID Producto"/>
+                <TableColumn fx:id="productoNombreColumn" text="Nombre Producto"/>
+                <TableColumn fx:id="cantidadColumn" text="Cantidad"/>
+                <TableColumn fx:id="precioColumn" text="Precio"/>
+                <TableColumn fx:id="subtotalColumn" text="Subtotal"/>
+            </columns>
+        </TableView>
+    </center>
+    <bottom>
+        <HBox spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Button text="Finalizar Venta" fx:id="finalizarVentaButton"/>
+        </HBox>
+    </bottom>
+</BorderPane>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.proyecto.interfaz.negocio.controller.ReporteController">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+    <HBox spacing="10">
+        <Label text="Fecha Inicio:"/>
+        <DatePicker fx:id="filtroFechaInicio"/>
+        <Label text="Fecha Fin:"/>
+        <DatePicker fx:id="filtroFechaFin"/>
+    </HBox>
+    <HBox spacing="10">
+        <Label text="Cliente:"/>
+        <TextField fx:id="filtroCliente"/>
+        <Label text="Producto:"/>
+        <TextField fx:id="filtroProducto"/>
+    </HBox>
+    <Button text="Generar Reporte por Fecha" onAction="#reportePorFecha"/>
+    <Button text="Generar Reporte por Cliente" onAction="#reportePorCliente"/>
+    <Button text="Generar Reporte por Producto" onAction="#reportePorProducto"/>
+    <TableView fx:id="reporteTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID"/>
+            <TableColumn fx:id="clienteColumn" text="Cliente"/>
+            <TableColumn fx:id="productoColumn" text="Producto"/>
+            <TableColumn fx:id="fechaColumn" text="Fecha"/>
+            <TableColumn fx:id="totalVentaColumn" text="Total"/>
+            <TableColumn fx:id="estadoColumn" text="Estado"/>
+        </columns>
+    </TableView>
+    <HBox spacing="10">
+        <Label text="Total Ventas:"/>
+        <Label fx:id="totalVentasLabel"/>
+        <Label text="Cantidad Ventas:"/>
+        <Label fx:id="cantidadVentasLabel"/>
+    </HBox>
+</VBox>

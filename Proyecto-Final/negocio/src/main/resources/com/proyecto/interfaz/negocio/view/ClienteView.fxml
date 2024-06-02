@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<?import javafx.scene.control.DatePicker?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.proyecto.interfaz.negocio.controller.ClientController">
+    <top>
+        <HBox spacing="10" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <TextField fx:id="nombreField" promptText="Nombre"/>
+            <TextField fx:id="emailField" promptText="Email"/>
+            <DatePicker fx:id="fechaNacimientoField" promptText="Fecha de Nacimiento"/>
+            <Button text="Agregar" onAction="#handleAgregar"/>
+            <Button text="Actualizar" onAction="#handleActualizar"/>
+            <Button text="Eliminar" onAction="#handleEliminar"/>
+        </HBox>
+    </top>
+    <center>
+        <TableView fx:id="clienteTable">
+            <columns>
+                <TableColumn fx:id="nombreColumn" text="Nombre"/>
+                <TableColumn fx:id="emailColumn" text="Email"/>
+                <TableColumn fx:id="fechaNacimientoColumn" text="Fecha de Nacimiento"/>
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>

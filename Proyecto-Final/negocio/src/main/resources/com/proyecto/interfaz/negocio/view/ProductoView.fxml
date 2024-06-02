@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.proyecto.interfaz.negocio.controller.ProductoController">
+    <top>
+        <Label text="Gestión de Productos"/>
+    </top>
+    <center>
+        <TableView fx:id="productoTable">
+            <columns>
+                <TableColumn fx:id="nombreColumn" text="Nombre"/>
+                <TableColumn fx:id="precioColumn" text="Precio"/>
+                <TableColumn fx:id="stockColumn" text="Stock"/>
+                <TableColumn fx:id="proveedorColumn" text="Proveedor"/>
+                <TableColumn fx:id="categoriaColumn" text="Categoría"/>
+            </columns>
+        </TableView>
+    </center>
+    <bottom>
+        <HBox spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Label text="Nombre"/>
+            <TextField fx:id="nombreField"/>
+            <Label text="Precio"/>
+            <TextField fx:id="precioField"/>
+            <Label text="Stock"/>
+            <TextField fx:id="stockField"/>
+            <Label text="Proveedor"/>
+            <ComboBox fx:id="proveedorComboBox"/>
+            <Label text="Categoría"/>
+            <ComboBox fx:id="categoriaComboBox"/>
+            <Button text="Agregar" onAction="#handleAgregar"/>
+            <Button text="Actualizar" onAction="#handleActualizar"/>
+            <Button text="Eliminar" onAction="#handleEliminar"/>
+        </HBox>
+    </bottom>
+</BorderPane>

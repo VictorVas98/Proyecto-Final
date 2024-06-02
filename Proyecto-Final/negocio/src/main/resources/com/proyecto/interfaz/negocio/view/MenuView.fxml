@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.proyecto.interfaz.negocio.controller.MenuController"
+      spacing="10">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+    <Button text="Gestión de Clientes" onAction="#showClientes"/>
+    <Button text="Gestión de Productos" onAction="#showProductos"/>
+    <Button text="Gestión de Categorías" onAction="#showCategorias"/>
+    <Button text="Compra de Productos" onAction="#showCompraProducto"/>
+    <Button text="Proveedores" onAction="#showProveedores"/>
+    <Button text="Reportes" onAction="#showReportes"/>
+    <Button text="Ventas" onAction="#showVentas"/>
+</VBox>
